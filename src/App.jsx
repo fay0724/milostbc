@@ -1,5 +1,4 @@
 import React from "react"
-import { Analytics } from "@vercel/analytics/react"
 import {
   Cart,
   FlexContent,
@@ -33,7 +32,6 @@ const App = () => {
         <Stories story={story} />
       </main>
       <Footer footerAPI={footerAPI} />
-      <Analytics />
     </>
   )
 }

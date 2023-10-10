@@ -31,36 +31,36 @@ const Stories = ({ story: { title, news } }) => {
         <div className="mt-7">
           <Splide options={splideOptions}>
             {news.map((val, i) => (
-              <SplideSlide key={i} className="mb-0.5 bg-black">
-                <div className="relative grid items-center gap-4 pb-2 rounded-lg shadow shadow-slate-200 ring-1 ring-slate-200">
+              <SplideSlide key={i} className="mb-0.5 bg-amber-600 rounded-lg">
+                <div className="relative grid items-center gap-4 pb-2 rounded-lg shadow shadow-slate-800 ring-1 ring-slate-800">
                   <div className="flex items-center justify-center">
                     <img
                       src={val.img}
                       alt={`img/story/${i}`}
-                      className="w-full h-auto object-cover shadow-md shadow-slate-200 rounded-tl-lg rounded-tr-lg"
+                      className="w-full h-auto object-cover shadow-md shadow-amber-300 rounded-tl-lg rounded-tr-lg"
                     />
                   </div>
                   <div className="flex items-center justify-between w-full px-4 text-white">
                     <div className="flex items-center gap-0.5">
-                      <HeartIcon className="icon-style text-red-500 w-5 h-5" />
+                      <HeartIcon className="icon-style text-pink-500 w-5 h-5" />
                       <span className="text-xs font-bold">{val.like}</span>
                     </div>
                     <div className="flex items-center gap-0.5">
-                      <ClockIcon className="icon-style w-4 h-4 text-black" />
+                      <ClockIcon className="icon-style w-4 h-4 text-amber-300" />
                       <span className="text-xs font-bold">{val.time}</span>
                     </div>
                     <div className="flex items-center gap-0.5">
-                      <HashtagIcon className="icon-style text-blue-600" />
-                      <span className="text-xs font-bold text-blue-600">
+                      <HashtagIcon className="icon-style text-amber-300" />
+                      <span className="text-xs font-bold text-white">
                         {val.by}
                       </span>
                     </div>
                   </div>
-                  <div className="grid items-center justify-items-start px-4 text-amber-300">
-                    <h1 className="text-base font-semibold lg:text-sm">
+                  <div className="grid items-center justify-items-start px-4">
+                    <h1 className="text-base font-semibold lg:text-sm text-white">
                       {val.title}
                     </h1>
-                    <p className="text-sm text-justify lg:text-xs">
+                    <p className="text-sm text-justify lg:text-xs text-amber-300">
                       {truncate(val.text, { length: 175 })}
                     </p>
                   </div>

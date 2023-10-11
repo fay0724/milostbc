@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux"
 import { StarIcon, ShoppingBagIcon } from "@heroicons/react/24/solid"
 import { setAddItemToCart, setOpenCart } from "../../app/CartSlice"
 
-const Item = ({
+const Products = ({
   ifExists,
   id,
   color,
@@ -102,4 +102,4 @@ const Item = ({
   )
 }
 
-export default Item
+export default Products

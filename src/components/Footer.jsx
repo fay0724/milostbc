@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
-
-const Footer = ({ footerAPI: { titles, links } }) => {
+const Footer = ({ footerAPI: { titles, links, img } }) => {
   const [Year, setYear] = useState()
   useEffect(() => {
     const getYear = () => setYear(new Date().getFullYear())
@@ -28,11 +27,17 @@ const Footer = ({ footerAPI: { titles, links } }) => {
               </ul>
             ))}
           </div>
+          <br />
           <div className="mt-5 text-center">
             <p className="text-sm md:text-center">
-              Copyright<sup className="text-base font-bold">&copy;</sup> All
-              Reserved Rights{" "}
-              <span className="font-semibold">MILOST BAKERY & CAKE {Year}</span>
+              Copyright<sup className="text-base font-bold">&copy; </sup>
+              <span> {Year}</span> All Reserved Rights
+              <br />
+              <img
+                src="/src/assets/logo-oval.webp"
+                alt="Milost"
+                className="m-auto w-[150px]"
+              />
             </p>
           </div>
         </div>

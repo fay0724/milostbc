@@ -1,4 +1,5 @@
 import React from "react"
+import { Routes, Route, Link, Outlet } from "react-router-dom"
 import {
   Cart,
   FlexContent,
@@ -6,6 +7,7 @@ import {
   Hero,
   Navbar,
   Sales,
+  AllProduct,
   Stories,
 } from "./components"
 import {
@@ -16,21 +18,37 @@ import {
   sneaker,
   story,
   footerAPI,
+  allProducts,
 } from "./data/data.js"
+// import AllProduct from "./components/utils/AllProduct"
+// import App from "./pages/App"
+
+const Home = () => {
+  return (
+    <main className="flex flex-col gap-16 relative">
+      <Hero heroapi={heroapi} />
+      <Sales endpoint={popularsales} ifExists />
+      <FlexContent endpoint={highlight} ifExists />
+      <Sales endpoint={toprateslaes} />
+      <FlexContent endpoint={sneaker} />
+      <Stories story={story} />
+      {/* <Link to="/all-product">Go to All Products</Link> */}
+    </main>
+  )
+}
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Cart />
-      <main className="flex flex-col gap-16 relative">
-        <Hero heroapi={heroapi} />
-        <Sales endpoint={popularsales} ifExists />
-        <FlexContent endpoint={highlight} ifExists />
-        <Sales endpoint={toprateslaes} />
-        <FlexContent endpoint={sneaker} />
-        <Stories story={story} />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/all-product"
+          element={<AllProduct endpoint={allProducts} />}
+        />
+      </Routes>
       <Footer footerAPI={footerAPI} />
     </>
   )

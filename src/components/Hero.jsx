@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-scroll"
 import Clips from "./utils/Clips"
 import SocialLink from "./utils/SocialLink"
 
@@ -18,12 +19,21 @@ const Hero = ({ heroapi: { title, btntext, img, sociallinks, videos } }) => {
             {/* <h1 className="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-extrabold filter drop-shadow-sm text-amber-300">
               {title}
             </h1> */}
-            <button
-              type="button"
-              className="button-theme bg-slate-200  shadow-slate-200 rounded-xl my-5"
+            <Link
+              to="sales"
+              smooth={true}
+              duration={500}
+              offset={-window.innerHeight / 9}
             >
-              {btntext}
-            </button>
+              {" "}
+              {/* Updated the button */}
+              <button
+                type="button"
+                className="button-theme bg-slate-200 shadow-slate-200 rounded-xl my-5"
+              >
+                {btntext}
+              </button>
+            </Link>
             <div className="grid items-center gap-5 md:gap-3 absolute top-[33vh] lg:top-[27vh] left-[11%] xl:left-0 w-auto h-auto">
               {videos?.map((val, i) => (
                 <Clips key={i} imgsrc={val.imgsrc} clip={val.clip} />

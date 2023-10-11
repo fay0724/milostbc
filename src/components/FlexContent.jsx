@@ -1,9 +1,12 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 
 const FlexContent = ({
   ifExists,
-  endpoint: { title, heading, text, img, btn, url },
+  endpoint: { title, heading, text, img, btn },
 }) => {
+  const navigate = useNavigate() // Menggunakan useNavigate
+
   return (
     <>
       <div
@@ -19,19 +22,13 @@ const FlexContent = ({
             {title}
           </h1>
           <p className="xl:text-sm my-4 text-slate-900">{text}</p>
-          <a
-            href={url}
-            className="flex items-center"
-            target={"_blank"}
-            role="button"
+          <button
+            onClick={() => navigate("/all-product")}
+            className="button-theme w-[189px] bg-slate-900 shadow-slate-900 text-slate-100 py-1.5"
           >
-            <button
-              type="button"
-              className="button-theme bg-slate-900 shadow-slate-900 text-slate-100 py-1.5"
-            >
-              {btn}
-            </button>
-          </a>
+            {btn}
+          </button>{" "}
+          {/* Tombol untuk navigasi ke AllProduct */}
         </div>
         <div className="flex items-center justify-center max-w-xl relative lg:max-w-none w-full">
           <img

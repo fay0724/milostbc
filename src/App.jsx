@@ -20,8 +20,6 @@ import {
   footerAPI,
   allProducts,
 } from "./data/data.js"
-// import AllProduct from "./components/utils/AllProduct"
-// import App from "./pages/App"
 
 const Home = () => {
   return (

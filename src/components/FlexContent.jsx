@@ -1,5 +1,6 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const FlexContent = ({
   ifExists,
@@ -22,12 +23,14 @@ const FlexContent = ({
             {title}
           </h1>
           <p className="xl:text-sm my-4 text-slate-900">{text}</p>
-          <button
-            onClick={() => navigate("/all-product")}
-            className="button-theme w-[189px] bg-slate-900 shadow-slate-900 text-slate-100 py-1.5"
-          >
-            {btn}
-          </button>{" "}
+          <Link to="/all-product">
+            <button
+              onClick={() => navigate("/all-product")}
+              className="button-theme w-[189px] bg-slate-900 shadow-slate-900 text-slate-100 py-1.5"
+            >
+              {btn}
+            </button>{" "}
+          </Link>
           {/* Tombol untuk navigasi ke AllProduct */}
         </div>
         <div className="flex items-center justify-center max-w-xl relative lg:max-w-none w-full">

@@ -880,7 +880,7 @@ const footerAPI = {
       { link: "Send Us Feeback" },
     ],
   ],
-  img: [{ img: logo }],
+  img: [logoOval],
 }
 
 export {

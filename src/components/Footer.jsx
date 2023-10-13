@@ -31,13 +31,9 @@ const Footer = ({ footerAPI: { titles, links, img } }) => {
           <div className="mt-5 text-center">
             <p className="text-sm md:text-center">
               Copyright<sup className="text-base font-bold">&copy; </sup>
-              <span> {Year}</span> All Reserved Rights
+              <span> {Year}</span> All Reserved Rights go
               <br />
-              <img
-                src="/src/assets/logo-oval.webp"
-                alt="Milost"
-                className="m-auto w-[150px]"
-              />
+              <img src={img} alt="Milost" className="m-auto w-[150px]" />
             </p>
           </div>
         </div>

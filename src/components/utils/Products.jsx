@@ -1,10 +1,5 @@
-import { BsFillBagFill } from "react-icons/bs"
 import { useDispatch } from "react-redux"
-import {
-    StarIcon,
-    ShoppingBagIcon,
-    ShoppingCartIcon,
-} from "@heroicons/react/24/solid"
+import { ShoppingCartIcon } from "@heroicons/react/24/solid"
 
 import { setAddItemToCart, setOpenCart } from "../../app/CartSlice"
 
